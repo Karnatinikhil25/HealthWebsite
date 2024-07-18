@@ -1,0 +1,13 @@
+@page
+@model IEnumerable<HealthWebsite.Models.Appointment>
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<h1>Appointments</h1>
+<ul>
+    @foreach (var appointment in Model)
+    {
+        <li>@appointment.PatientName with Dr. @appointment.DoctorName on @appointment.Date at @appointment.Time</li>
+    }
+</ul>
